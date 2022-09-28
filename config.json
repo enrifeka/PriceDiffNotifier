@@ -1,0 +1,24 @@
+{
+    "appConfig": {
+        "telegramBotAPIKey": "123:xxx",
+        "telegramChatId": 123,
+        "notifyOnPercentageDifference": 10,
+        "refreshFrequencySeconds": 1,
+        "requestTimeoutSeconds": 0.95,
+        "notificationTimeoutSeconds": 5
+    },
+    "endpoints": [
+        {
+            "name": "binance",
+            "priceAPI": "https://api.binance.com/api/v3/ticker/price?symbol=FTMBUSD",
+            "priceTagPath": "price",
+            "active": true
+        },
+        {
+            "name": "dexScreener",
+            "priceAPI": "https://api.dexscreener.com/latest/dex/pairs/ethereum/0x3B685307C8611AFb2A9E83EBc8743dc20480716E",
+            "priceTagPath": "pairs.0.priceUsd",
+            "active": true
+        }
+    ]
+}
