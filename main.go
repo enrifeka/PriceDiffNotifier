@@ -37,7 +37,7 @@ func main() {
 			continue
 		}
 		diffPercentage := diffInPercentage(postRes[0].Endpoint.ParsedPrice, postRes[1].Endpoint.ParsedPrice)
-		outputStr += "diffPercentage: " + fmt.Sprintf("%.2f", diffPercentage)
+		outputStr += "diff: " + fmt.Sprintf("%.2f %%", diffPercentage)
 		fmt.Println(outputStr)
 		if time.Since(lastNotificationTime).Seconds() >= config.App.NotificationTimeoutSeconds &&
 			diffPercentage != 0 &&
